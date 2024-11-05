@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to HTML and IDEs </title>
+    <link rel="icon" href="./src/favicon-16x16.png" type="image/x-icon">
+    <style>
+        .highlight {
+            font-weight: bold;
+            color: green;
+            font-size: 1.2em;
+        }
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightcoral;
+            margin: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Introduction to HTML and IDEs (Coding Environments)</h1>
+        <p><strong>Lesson Objective: </strong> Learn what HTML is, understand its structure and purpose, and discover how to use Visual Studio Code (an IDE) to write and test HTML code.</p>
+        <nav>
+            <ul>
+                <li><a href="#what-is-ide">1. What is an IDE?</a></li>
+                <li><a href="#vscode">2. Visual Studio Code: Our IDE</a></li>
+                <li><a href="#what-is-html">3. What is HTML?</a></li>
+                <li><a href="#basic-elements">4. Basic Elements of an HTML Document</a></li>
+                <li><a href="#html-structure">5. Structure of an HTML Document</a></li>
+                <li><a href="#html-tags">6. Basic HTML Tags</a></li>
+                <li><a href="#attributes">7. Attributes in HTML</a></li>
+                <li><a href="#semantic-html">8. Using Semantic HTML for Accessibility</a></li>
+                <li><a href="#example-html-page">9. Simple HTML Page Example</a></li>
+                <li><a href="#how-html-works">10. How HTML Works</a></li>
+                <li><a href="#practice-exercise">11. Practice Exercise</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+            </ul>
+        </nav>
+        <p>*we used anchors here to navigate to other parts of the page.</p>
+    </header>
+
+    <main>
+        <section id="what-is-ide">
+            <h2>1. What is an IDE and Why Do We Use It?</h2>
+            <p>An <strong>IDE (Integrated Development Environment)</strong> is a software application that combines tools for writing, editing, debugging, and running code in one place. IDEs make the coding process more organized, efficient, and accessible, especially for beginners.</p>
+            <h3>Why Use an IDE?</h3>
+            <ul>
+                <li><strong>Convenience:</strong> IDEs provide features like autocompletion, syntax highlighting, and error correction, helping you write code faster and more accurately.</li>
+                <li><strong>Debugging:</strong> Built-in tools for finding and fixing errors make testing easier.</li>
+                <li><strong>Version Control:</strong> Many IDEs support integration with version control systems like Git, enabling you to track changes in your code.</li>
+            </ul>
+            <h3>Types of IDEs</h3>
+            <p>There are many IDEs available, each suitable for different languages and types of projects. Here are some popular options:</p>
+            <ul>
+                <li><strong>PyCharm</strong> — popular for Python development.</li>
+                <li><strong>IntelliJ IDEA</strong> — widely used for Java and other languages.</li>
+                <li><strong>Eclipse</strong> — cross-platform IDE for Java and other languages.</li>
+                <li><strong>Visual Studio Code</strong> — lightweight, multi-language editor that can function as a full IDE with extensions.</li>
+            </ul>
+        </section>
+
+        <section id="vscode">
+            <h2>2. Visual Studio Code: Our IDE</h2>
+            <p><strong>Visual Studio Code</strong> is a free, open-source code editor developed by Microsoft. It’s suitable for writing code in various languages, including HTML, CSS, JavaScript, Python, and others. With extensions, VS Code can transform into a full IDE, making it ideal for both beginners and professionals.</p>
+            <h3>Why Visual Studio Code?</h3>
+            <ul>
+                <li><strong>Supports Multiple Languages:</strong> VS Code recognizes and highlights the syntax for many programming languages and can be extended to support more.</li>
+                <li><strong>Extensions:</strong> VS Code has an extension marketplace where you can add new features for specific languages, themes, and tools.</li>
+                <li><strong>Git Integration:</strong> Built-in Git support makes it easy to work with code repositories directly in the editor.</li>
+                <li><strong>Lightweight and Flexible:</strong> VS Code is fast, doesn’t require much space, and works on most operating systems.</li>
+            </ul>
+            <h3>Example Workflow in Visual Studio Code</h3>
+            <ul>
+                <li><strong>Installing Extensions</strong> — for example, for HTML and CSS, to enable autocompletion and styling hints.</li>
+                <li><strong>Using the Terminal</strong> — VS Code includes a terminal for running commands directly in the editor, like package installations or project management.</li>
+                <li><strong>File Management</strong> — a file navigation pane helps you manage and organize project files easily.</li>
+            </ul>
+        </section>
+
+        <section id="what-is-html">
+            <h2>3. What is HTML?</h2>
+            <p><strong>HTML (HyperText Markup Language)</strong> is a markup language used to create the structure of web pages. It allows the browser to understand what elements should be displayed, in what order, and with what styling.</p>
+            <h3>Key Points:</h3>
+            <ul>
+                <li>HTML defines headers, text, images, links, and other elements.</li>
+                <li>HTML is not a programming language; it is used solely to structure and present content.</li>
+            </ul>
+        </section>
+
+        <section id="basic-elements">
+            <h2>4. Basic Elements of an HTML Document</h2>
+            <p>An HTML document consists of <strong>tags</strong>. Tags are special commands that tell the browser what type of content or style should be applied to the content.</p>
+            <h3>Essential Concepts:</h3>
+            <ul>
+                <li><strong>Tag:</strong> The fundamental unit in HTML, written within angle brackets (<code>&lt;&gt;</code>).</li>
+                <li><strong>Element:</strong> A tag with its content (for example, <code>&lt;h1&gt;Heading&lt;/h1&gt;</code>).</li>
+                <li><strong>Attribute:</strong> Additional parameters that specify how an element should work or display (for example, <code>&lt;img src="image.jpg" alt="Image description"&gt;</code>).</li>
+            </ul>
+        </section>
+
+        <section id="html-structure">
+            <h2>5. Structure of an HTML Document</h2>
+            <p>An HTML document contains two main parts: <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code>.</p>
+            <pre><code>&lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                &lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;meta name="description" content="A basic example of an HTML page structure"&gt;
+                    &lt;title&gt;My First Page&lt;/title&gt;
+                    &lt;link rel="stylesheet" href="styles.css"&gt;
+                    &lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;
+                    &lt;script src="script.js" defer&gt;&lt;/script&gt;
+                &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;h1&gt;Welcome to my page!&lt;/h1&gt;
+                    &lt;p&gt;This is the first paragraph on my web page.&lt;/p&gt;
+                &lt;/body&gt;
+                &lt;/html&gt;
+                </code></pre>
+            <h3>Structure Explanation:</h3>
+            <ul>
+                <li><code>&lt;!DOCTYPE html&gt;</code>: Declares the document as HTML5.</li>
+                <li><code>&lt;html&gt;</code>: The root tag containing the entire HTML document.</li>
+                <li><code>&lt;head&gt;</code>: Contains essential information about the page, such as:
+                    <ul>
+                        <li><code>&lt;title&gt;</code>: Defines the page title that appears in the browser tab.</li>
+                        <li><code>&lt;meta charset="UTF-8"&gt;</code>: Sets the character encoding for the page, ensuring text displays correctly in the browser.</li>
+                        <li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>: Controls the page’s viewport settings, helping the layout adjust for different screen sizes, which is important for mobile optimization.</li>
+                        <li><code>&lt;meta name="description" content="... "&gt;</code>: Provides a brief description of the page’s content, useful for SEO and search engines to display in search results.</li>
+                        <li><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code>: Links to an external CSS file that defines the page’s style and layout.</li>
+                        <li><code>&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;</code>: Sets the favicon (the small icon that appears on the browser tab for the page).</li>
+                        <li><code>&lt;script src="script.js" defer&gt;&lt;/script&gt;</code>: Loads an external JavaScript file with the <code>defer</code> attribute, which tells the browser to execute the script after the HTML document has been parsed, improving page load performance.</li>
+                    </ul>
+                </li>
+                <li><code>&lt;body&gt;</code>: The main content of the page, visible to the user (headings, text, images, etc.).</li>
+            </ul>
+        </section>
+
+        <section id="html-tags">
+            <h2>6. Basic HTML Tags</h2>
+            <h3>Examples of Common HTML Tags:</h3>
+            <ul>
+                <li><code>&lt;h1&gt; to &lt;h6&gt;</code>: Used for creating headings of different levels.</li>
+                <li><code>&lt;p&gt;</code>: Used for text paragraphs.</li>
+                <li><code>&lt;a href="..."&gt;</code>: Used to create links to other pages.</li>
+                <li><code>&lt;img src="..." alt="..."&gt;</code>: Used to display images on the page.</li>
+            </ul>
+            <p>Example usage:</p>
+            <pre><code>&lt;h1&gt;Heading Level 1&lt;/h1&gt;
+&lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+&lt;a href="https://example.com"&gt;Go to the website&lt;/a&gt;
+&lt;img src="image.jpg" alt="Description of the image"&gt;
+            </code></pre>
+            <a href="https://ru.freepik.com/photos/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8" target="_blank">Look at the pictures, Sarah</a>
+   
+            
+        </section>
+        <section id="attributes">
+            <h2>7. Attributes in HTML</h2>
+            <p><strong>Attributes</strong> in HTML are extra bits of information that provide additional details about elements. They modify the behavior or appearance of an element and are always included inside the opening tag. Attributes follow a <code>name="value"</code> structure, where the name defines the type of attribute and the value provides specific details.</p>
+            <pre><code>&lt;p class="myClass"&gt;This is a paragraph of text.&lt;/p&gt;</code></pre>
+            <h3>Commonly Used Attributes:</h3>
+            <ul>
+                <li><strong><code>id</code></strong> — A unique identifier for an element on the page.
+                    <ul>
+                        <li>Often used for styling specific elements with CSS or for targeting elements with JavaScript.</li>
+                    </ul>
+                    <pre><code>&lt;div id="unique-box"&gt;This is a uniquely identified box.&lt;/div&gt;</code></pre>
+                </li>
+                
+                <li><strong><code>class</code></strong> — Defines one or more classes for an element, allowing multiple elements to share the same styling or behavior.
+                    <ul>
+                        <li>Can be used for styling groups of elements with CSS.</li>
+                    </ul>
+                    <pre><code>&lt;p class="highlight"&gt;This paragraph has a special class.&lt;/p&gt;</code></pre>
+                </li>
+                
+                <li><strong><code>style</code></strong> — Adds inline CSS styling directly to an element.
+                    <ul>
+                        <li>Useful for quick styling changes, although it’s better to use CSS stylesheets for larger projects.</li>
+                    </ul>
+                    <pre><code>&lt;div style="background-color: lightblue; padding: 10px;"&gt;Styled div with background color.&lt;/div&gt;</code></pre>
+                    <div style="background-color: yellowgreen; padding: 30px; margin: 50px">Styled div with background color.</div>
+                </li>
+                
+                <li><strong><code>href</code></strong> — Used in <code>&lt;a&gt;</code> tags to define the URL of a link.
+                    <ul>
+                        <li>Specifies the destination of a hyperlink.</li>
+                    </ul>
+                    <pre><code>&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;</code></pre>
+                </li>
+                
+                <li><strong><code>src</code></strong> — Specifies the source URL for an image in an <code>&lt;img&gt;</code> tag.
+                    <ul>
+                        <li>Provides the path to the image file.</li>
+                    </ul>
+                    <pre><code>&lt;img src="image.jpg" alt="Description of image"&gt;</code></pre>
+                    <div style="margin: 10px">
+                        <img src="./src/Sarah.png" alt="Photo of my favorite English teacher"/>
+                    </div>
+                </li>
+                
+                <li><strong><code>alt</code></strong> — An alternative text for an image.
+                    <ul>
+                        <li>Essential for accessibility, providing a text description for images.</li>
+                    </ul>
+                    <pre><code>&lt;img src="image.jpg" alt="Description of the image"&gt;</code></pre>
+                </li>
+                
+                <li><strong><code>target</code></strong> — Used in links (<code>&lt;a&gt;</code>) to specify where to open the linked document.
+                    <ul>
+                        <li>Common values include <code>_blank</code> (opens in a new tab) and <code>_self</code> (opens in the same tab).</li>
+                    </ul>
+                    <pre><code>&lt;a href="https://example.com" target="_blank"&gt;Open in new tab&lt;/a&gt;</code></pre>
+                </li>
+            </ul>
+        
+            <h3>Example with Inline Styling</h3>
+            <p>Here’s an example using multiple attributes. The <code>id</code>, <code>class</code>, and <code>style</code> attributes are applied to control the appearance and placement of the block:</p>
+            <div id="unique-box" class="box" style="margin-left: 50px; padding: 10px;">
+                <p class="highlight">This is a highlighted box with custom styles.</p>
+                <a href="https://example.com" target="_blank">Go to Example</a>
+            </div>
+        </section>
+        <section id="semantic-html">
+            <h2>8. Using Semantic HTML for Accessibility</h2>
+            <p>In HTML, you can place all content inside <code>&lt;div&gt;</code> tags, but this approach has major limitations for accessibility and SEO. <strong>Semantic tags</strong> like <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;header&gt;</code>, and others provide a clear structure that’s beneficial for both search engines and screen readers, which help visually impaired users.</p>
+            <h3>Why Semantic Tags Matter:</h3>
+            <ul>
+                <li><strong>Improved SEO:</strong> Search engines understand the purpose of each tag, which helps with ranking and visibility.</li>
+                <li><strong>Accessibility:</strong> Screen readers, which visually impaired users rely on, use these tags to convey content structure. Tags like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>, and <code>&lt;article&gt;</code> help users navigate the content more easily.</li>
+            </ul>
+            <p>Example of Semantic HTML:</p>
+            <pre><code>&lt;article&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Accessible Web Design&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;p&gt;Creating content with semantic tags helps everyone navigate and understand the page better.&lt;/p&gt;
+&lt;/article&gt;
+            </code></pre>
+            <p>Example of Non-Semantic HTML (using only &lt;div&gt; tags):</p>
+<pre><code>&lt;div&gt;
+    &lt;div&gt;
+        &lt;h1&gt;Accessible Web Design&lt;/h1&gt;
+    &lt;/div&gt;
+    &lt;div&gt;Creating content with semantic tags helps everyone navigate and understand the page better.&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        </section>
+
+        <section id="example-html-page">
+            <h2>9. Simple HTML Page Example</h2>
+            <p>Let’s put together what we’ve learned to create a basic HTML page with a title, text, a link, and an image.</p>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My First HTML Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, HTML!&lt;/h1&gt;
+    &lt;p&gt;This is my first HTML document. I'm just starting to learn web development.&lt;/p&gt;
+    &lt;a href="https://example.com" target="_blank"&gt;Visit the Example site&lt;/a&gt;
+    &lt;br&gt;
+    &lt;img src="image.jpg" alt="Beautiful picture"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+            <h3>Explanation:</h3>
+            <ul>
+                <li><code>&lt;h1&gt;</code> is used for the page title.</li>
+                <li><code>&lt;p&gt;</code> is for the paragraph text.</li>
+                <li><code>&lt;a&gt;</code> creates a link to an external site.</li>
+                <li><code>&lt;img&gt;</code> displays an image on the page.</li>
+            </ul>
+        </section>
+
+        <section id="how-html-works">
+            <h2>10. How HTML Works</h2>
+            <p>When you open an HTML document in the browser, the browser:</p>
+            <ol>
+                <li>Reads the HTML code and converts it into the <strong>DOM</strong> (Document Object Model).</li>
+                <li>Displays each element on the page according to the specified HTML tags and attributes.</li>
+            </ol>
+        </section>
+
+        <section id="practice-exercise">
+            <h2>11. Practice Exercise</h2>
+            <p>Create your own HTML document with:</p>
+            <ul>
+                <li>A level 1 heading (<code>&lt;h1&gt;</code>).</li>
+                <li>A paragraph (<code>&lt;p&gt;</code>) describing the page.</li>
+                <li>A link to another website that opens in a new tab.</li>
+                <li>An image with alternative text.</li>
+            </ul>
+            <p>Try loading your document in a browser and see how it looks!</p>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>In this lesson, we learned:</p>
+            <ul>
+                <li>What HTML is and how it’s used to structure web pages.</li>
+                <li>The basics of IDEs, particularly Visual Studio Code, and how to use it to write HTML code.</li>
+                <li>Key HTML tags and how to use them.</li>
+                <li>How to create your first HTML document and open it in a browser.</li>
+            </ul>
+            <p>In the next lesson, we will explore adding CSS to HTML to control the appearance of our page!</p>
+        </section>
+    </main>
+</body>
+</html>
